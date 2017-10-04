@@ -13,7 +13,6 @@ public class TextService implements MessageService {
 
     @Override
     public boolean sendMessage(String msg, String receiver) {
-        ;
         logger.info("Text message sent to {} with Message '{}' ", receiver, msg);
         return true;
     }
