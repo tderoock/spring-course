@@ -19,9 +19,9 @@ public class Example1_JDBC {
             conn = DriverManager.getConnection("jdbc:h2:mem:", "sa", "");
             stmt = conn.createStatement();
             stmt.execute("create table message(id integer, message varchar(1024), recipient varchar(128))");
-            stmt.execute("insert into message values (1, 'Hello Ordina!', 'info@ordina.be')");
-            stmt.execute("insert into message values (2, 'Hello again, anybody there?', 'info@ordina.be')");
-            stmt.execute("insert into message values (3, 'Never mind...', 'info@ordina.be')");
+            stmt.execute("insert into message values (1, 'Hello Ordina!', 'info@tvh.com')");
+            stmt.execute("insert into message values (2, 'Hello again, anybody there?', 'info@tvh.com')");
+            stmt.execute("insert into message values (3, 'Never mind...', 'info@tvh.com')");
 
             ResultSet rset = stmt.executeQuery("select message, recipient from message");
             while (rset.next()) {

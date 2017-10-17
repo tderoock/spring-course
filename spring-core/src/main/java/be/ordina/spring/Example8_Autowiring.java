@@ -13,7 +13,7 @@ public class Example8_Autowiring {
 
         // We ask the bean created by Spring
         SendApplication app = context.getBean(SendApplication.class);
-        app.processMessage("Hi Ordina with autowired EmailService!", "info@ordina.be");
+        app.processMessage("Hi TVH with autowired EmailService!", "info@tvh.com");
 
         context.registerShutdownHook();
     }

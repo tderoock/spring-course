@@ -16,7 +16,7 @@ public class Example12_Autowired {
 
         // We ask the bean created by Spring
         SendApplication app = context.getBean(SendApplication.class);
-        app.processMessage("Hi Ordina with autowired TextService!", "info@ordina.be");
+        app.processMessage("Hi TVH with autowired TextService!", "info@tvh.com");
 
         context.registerShutdownHook();
     }

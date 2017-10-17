@@ -54,7 +54,7 @@ public class EmailService implements MessageService, ApplicationContextAware {
 
     @Override
     public boolean sendMessage(String msg, String receiver) {
-        logger.info("Email message sent to {} with Message '{} {}'", receiver != null ? receiver : defaultRecipient, msg, footer);
+        logger.error("Email message sent to {} with Message '{} {}'", receiver != null ? receiver : defaultRecipient, msg, footer);
         return true;
     }
 

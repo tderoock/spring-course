@@ -13,7 +13,7 @@ public class Example7_Collections {
 
         // We ask the bean created by Spring
         EmailService emailService = context.getBean(EmailService.class);
-        emailService.sendMessage("Hi Ordina with injected Collection!", "info@ordina.be");
+        emailService.sendMessage("Hi TVH with injected Collection!", "info@tvh.com");
 
         context.registerShutdownHook();
     }

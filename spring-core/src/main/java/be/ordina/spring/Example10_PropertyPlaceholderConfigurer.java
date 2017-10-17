@@ -13,7 +13,7 @@ public class Example10_PropertyPlaceholderConfigurer {
 
         // We ask the bean created by Spring
         EmailService emailService = context.getBean(EmailService.class);
-        emailService.sendMessage("Hi Ordina with EmailService and default recipient!", null);
+        emailService.sendMessage("Hi TVH with EmailService and default recipient!", null);
 
         context.registerShutdownHook();
     }

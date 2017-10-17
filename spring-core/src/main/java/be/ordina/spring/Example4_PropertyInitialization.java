@@ -13,7 +13,7 @@ public class Example4_PropertyInitialization {
 
         // We ask the bean created by Spring
         EmailService emailService = (EmailService) context.getBean("emailService");
-        emailService.sendMessage("Hi Ordina with EmailService managed by Spring!", "info@ordina.be");
+        emailService.sendMessage("Hi TVH, -- with EmailService managed by Spring!", "info@tvh.com");
 
         context.registerShutdownHook();
     }

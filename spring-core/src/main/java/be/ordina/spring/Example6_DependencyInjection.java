@@ -13,7 +13,7 @@ public class Example6_DependencyInjection {
 
         // We ask the bean created by Spring
         SendApplication app = context.getBean(SendApplication.class);
-        app.processMessage("Hi Ordina with injected EmailService!", "info@ordina.be");
+        app.processMessage("Hi TVH with injected EmailService!", "info@tvh.com");
 
         context.registerShutdownHook();
     }

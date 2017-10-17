@@ -14,7 +14,7 @@ public class Example_AnnotationConfig {
         // SendApplication does not know which implementation of MessageService it is using.
         // This is called Inversion of Control or Dependency Injection
         SendApplication app = context.getBean(SendApplication.class);
-        app.processMessage("Hi Ordina!", "info@ordina.be");
+        app.processMessage("Hi TVH!", "info@tvh.com");
 
         context.close();
     }
