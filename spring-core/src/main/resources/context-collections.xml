@@ -11,6 +11,7 @@
                 <value>Ken</value>
                 <value>Andreas</value>
                 <value>Dieter</value>
+                <value>Tim</value>
             </list>
         </constructor-arg>
     </bean>

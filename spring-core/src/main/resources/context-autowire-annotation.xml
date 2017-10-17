@@ -11,9 +11,8 @@
         <property name="footer" value="Best regards, Ken and Andreas"/>
     </bean>
 
-    <bean id="messageService2" class="be.ordina.spring.service.EmailService">
+    <bean id="messageService2" class="be.ordina.spring.service.TextService">
         <qualifier value="textMessageService" />
-        <property name="footer" value="Best regards, Ken and Andreas"/>
     </bean>
 
     <!-- Make Spring scan beans for the @Autowired annotation -->

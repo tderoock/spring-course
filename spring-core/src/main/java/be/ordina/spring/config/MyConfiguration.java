@@ -13,7 +13,7 @@ import org.springframework.context.annotation.Configuration;
 @ComponentScan(value = {"be.ordina.spring"})
 public class MyConfiguration {
     @Bean
-    public MessageService messageService() {
+    public MessageService messageService1() {
         return new EmailService();
     }
 }

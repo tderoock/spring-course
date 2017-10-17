@@ -5,14 +5,20 @@
 
     <bean id="sendApplication" class="be.ordina.spring.components.SendApplication">
         <!-- Dependency injection -->
-        <property name="messageService" ref="emailAlias"/>
+        <property name="messageService" ref="emailAlias" />
     </bean>
 
-    <bean id="emailService" class="be.ordina.spring.service.EmailService">
+    <bean id="emailServiceId" class="be.ordina.spring.service.EmailService">
         <property name="footer" value="Best regards, Ken and Andreas"/>
     </bean>
 
     <!-- Alias for the email service -->
-    <alias name="emailService" alias="emailAlias"/>
+    <alias name="emailServiceId" alias="emailAlias"/>
+
+    <!--But this can also be done without aliases!-->
+    <bean id="sendApplication2" class="be.ordina.spring.components.SendApplication">
+        <!-- Dependency injection -->
+        <property name="messageService" ref="emailServiceId" />
+    </bean>
 
 </beans>

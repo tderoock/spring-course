@@ -22,8 +22,8 @@ public class SendApplication {
 
     @Autowired
     @Required
-    //@Qualifier("textMessageService")
-    public void setMessageService(MessageService messageService) {
-        this.messageService = messageService;
+//    @Qualifier("textMessageService")
+    public void setMessageService(MessageService messageService1) {
+        this.messageService = messageService1;
     }
 }

@@ -6,6 +6,8 @@ import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.stereotype.Service;
+import org.springframework.util.CollectionUtils;
+import org.springframework.util.StringUtils;
 
 import java.util.List;
 
@@ -38,18 +40,7 @@ public class EmailService implements MessageService, ApplicationContextAware {
      */
     public EmailService(String footer, List<String> names) {
         StringBuilder fullFooter = new StringBuilder(footer);
-        if (names != null) {
-            for (int i = 0; i < names.size(); i++) {
-                String name = names.get(i);
-                if (i == names.size() - 1) {
-                    fullFooter.append(" and ");
-                } else if (i < names.size() && i != 0) {
-                    fullFooter.append(", ");
-                }
-                fullFooter.append(name);
-            }
-        }
-        this.footer = fullFooter.toString();
+        this.footer = fullFooter.append(StringUtils.arrayToCommaDelimitedString(names.toArray())).toString();
     }
 
     @Override
