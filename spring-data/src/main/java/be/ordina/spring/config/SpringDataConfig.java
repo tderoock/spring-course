@@ -14,8 +14,8 @@ import javax.sql.DataSource;
 /**
  * @author Ken Coenen
  */
-@Configuration
-@ImportResource("context.xml")
+//@Configuration
+//@ImportResource("context.xml")
 public class SpringDataConfig {
     @Autowired
     private DataSource dataSource;

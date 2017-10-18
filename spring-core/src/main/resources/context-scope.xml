@@ -1,0 +1,16 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="incrementService" class="be.ordina.spring.scope.IncrementServiceImpl" scope="prototype"/>
+
+    <bean class="be.ordina.spring.scope.ScopeApp" id="scopeApp1">
+        <property name="incrementService" ref="incrementService" />
+    </bean>
+
+    <bean class="be.ordina.spring.scope.ScopeApp" id="scopeApp2">
+        <property name="incrementService" ref="incrementService" />
+    </bean>
+
+</beans>

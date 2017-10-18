@@ -1,6 +1,7 @@
 package be.ordina.spring;
 
 import be.ordina.spring.service.EmailService;
+import be.ordina.spring.service.MessageService;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.xml.XmlBeanFactory;
 import org.springframework.core.io.ClassPathResource;
@@ -16,7 +17,7 @@ public class Example2_BeanFactory {
         BeanFactory factory = new XmlBeanFactory(resource);
 
         // We ask the bean created by Spring
-        EmailService emailService = (EmailService) factory.getBean("emailService");
+        MessageService emailService = (MessageService) factory.getBean("emailService");
         emailService.sendMessage("Hi TVH with EmailService managed by Spring!", "info@tvh.com");
     }
 }
